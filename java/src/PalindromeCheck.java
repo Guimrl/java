@@ -8,13 +8,19 @@ public class PalindromeCheck {
         int length = input.length();
         boolean isPalindrome = true;
 
-        for (int i = 0; i < length / 2; i++) {
-            if (input.charAt(i) != input.charAt(length - i - 1)) {
-                isPalindrome = false;
-                break;
+        try {
+            for (int i = 0; i < length / 2; i++) {
+                if (input.charAt(i) != input.charAt(length - i - 1)) {
+                    isPalindrome = false;
+                    break;
+                }
             }
-        }
+            System.out.println("Is palindrome? " + isPalindrome);
 
-        System.out.println("Is palindrome? " + isPalindrome);
+        } catch (Exception e) {
+            e.getMessage();
+        } finally {
+            sc.close();
+        }
     }
 }
